@@ -29,6 +29,8 @@
         <div class="container">
             <div class="row">
                 <article class="span12">
+                    
+                    {{zone('main')|raw}}
 
                     {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'crop':1, 'transSpeed': '1000', 'transType': 'fade', 'showDescription': true, 'showTitle': true, 'showButtons': true, 'showBullets': false, 'allowPause': false, 'allowLoop': true, 'images':[{'imageHeight':'391', 'imageWidth':'1170', 'url':asset('/images/slider/slide-1.jpg'), 'title':'varius ac vulputate in eleifen.', 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat est sit amet odio interdum quis semper libero volutpatMauris libero sem.'}, {'imageHeight':'391','imageWidth':'1170', 'url':asset('/images/slider/slide-2.jpg'), 'title':'varius ac vulputate in eleifen.', 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat est sit amet odio interdum quis semper libero volutpatMauris libero sem.'}, {'imageHeight':'391', 'imageWidth':'1170', 'url':asset('/images/slider/slide-3.jpg'), 'title':'varius ac vulputate in eleifen.', 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat est sit amet odio interdum quis semper libero volutpatMauris libero sem.'}]})|raw}}
                     {{widget('space', 'space', {'height': '50'})|raw}}
@@ -52,8 +54,8 @@
 
                     <div class="row">
                         <article class="span6">
-                            {{widget('content', 'title2', {content: '<h2>title</h2>', lines: 'all'})|raw}}
-                            <figure class="fleft">{{widget('image', 'image', { 'src': asset('images/pages/page1-img1.jpg'), 'imageWidth': '140px'})|raw}}</figure>
+                            {{widget('content', 'title2', {content: '<h2>welcome</h2>', lines: 'all'})|raw}}
+                            <figure class="fleft">{{widget('image', 'image1', { 'src': asset('images/pages/page1-img1.jpg'), 'imageWidth': '140px'})|raw}}</figure>
                             <div class="overflow">
                                 {{widget('content', 'text1', {content: '<h4>jeff lincoln</h4><h5>General manager</h5><blockquote><p>Adicing eesque sed dolor. Aliqu ngue ferment nisl. Mes cuml dia sed in lacus ut eniascing alitil it amet eismod ictor uterti ligulaam apibticdu mtsent justo dolor los ltiissim pulvinar. Sepiciatis und. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, con.</p></blockquote>', lines: 'all'})|raw}}
                             </div>
@@ -71,12 +73,12 @@
                     <div class="row">
                         <article class="span4">
                             {{widget('content', 'title4', {content: '<h2>from the blog</h2>', lines: 'all'})|raw}}
-                            <figure class="fleft">{{widget('image', 'image', { 'src': asset('images/pages/page1-img2.jpg'), 'imageWidth': '60px'})|raw}}</figure>
+                            <figure class="fleft">{{widget('image', 'image2', { 'src': asset('images/pages/page1-img2.jpg'), 'imageWidth': '60px'})|raw}}</figure>
                             <div class="overflow">
                                 {{widget('content', 'text4', {content: '<strong>Lorem ipsum dolor sit amet, conse ctetur adipisc dolore lreom porta.</strong><span class="time">16th Aug, 2012</span>', lines: 'all'})|raw}}
                             </div>
                             <div class="clear"></div>
-                            <figure class="fleft">{{widget('image', 'image', { 'src': asset('images/pages/page1-img3.jpg'), 'imageWidth': '60px'})|raw}}</figure>
+                            <figure class="fleft">{{widget('image', 'image3', { 'src': asset('images/pages/page1-img3.jpg'), 'imageWidth': '60px'})|raw}}</figure>
                             <div class="overflow">
                                 {{widget('content', 'text5', {content: '<strong>Lorem ipsum dolor sit amet, conse ctetur adipisc dolore lreom porta.</strong><span class="time">16th Aug, 2012</span>', lines: 'all'})|raw}}
                             </div>
@@ -99,8 +101,6 @@
                             {{widget('space', 'space', {'height': '50'})|raw}}
                         </article>
                     </div>
-                    
-                    {{zone('main')|raw}}
 
                 </article>
             </div>
