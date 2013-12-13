@@ -3,7 +3,7 @@
 @color-swatch3:            #f49948;
 @color-swatch4:            #494949;
 @color-swatch5:            #8a8a8a;
-@color-swatch6:            #524a42;/**/
+@color-swatch6:            #fbfaf8;
 @color-swatch7:            #8a8a8a;
 //
 // Accent colors
@@ -702,6 +702,7 @@ div[id$="copyright"] {
 .gallery-widget{
   margin: 0;
   overflow: hidden;
+  background-color: @color-swatch4;
   li{
     float: left;
     list-style: none;
@@ -713,11 +714,22 @@ div[id$="copyright"] {
         color: inherit;
         text-decoration: none;
         img{
-          margin-bottom: 15px;
+          margin-bottom: 0px;
+          border-bottom: 2px solid @color-swatch6;
         }
         span{
           display: block;
-          text-align: center;
+          background-color: @color-swatch4;
+          &.title{
+            font-weight: bold;
+            color: @color-swatch3;
+            padding: 10px 15px 0;
+          }
+          &.description{
+            color: @color-swatch1;
+            padding: 0 15px 10px;
+            text-transform: uppercase;
+          }
         }
         &:hover{
           color: inherit;
