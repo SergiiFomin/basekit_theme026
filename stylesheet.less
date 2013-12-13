@@ -669,7 +669,6 @@ div[id$="copyright"] {
 
 .widget.image {
   margin-bottom: @baseLineHeight;
-  background-color: @color-swatch4;
   img {
     max-width: 100%;
     .box-sizing(border-box);
@@ -683,6 +682,7 @@ div[id$="copyright"] {
     text-align: center;
     text-transform: uppercase;
     line-height: @font-swatch4-line-height;
+    background-color: @color-swatch4;
   }
   span.image-description {
     display: block;
@@ -692,6 +692,7 @@ div[id$="copyright"] {
     font-weight: @font-swatch5-font-weight;
     font-size: @font-swatch5-font-size;
     line-height: @font-swatch5-line-height;
+    background-color: @color-swatch4;
   }
 }
 
@@ -1230,7 +1231,7 @@ input.button,
           font-family: @font-swatch5-font-family;
           font-size: @font-swatch5-font-size;
           font-weight: @font-swatch5-font-weight;
-          line-height: bkscale(@font-swatch5-line-height, 0.55);
+          line-height: @font-swatch5-line-height;
           color: @color-swatch1;
           letter-spacing: @font-swatch5-letter-spacing;
           text-transform: uppercase;
@@ -1241,7 +1242,7 @@ input.button,
           font-family: @font-swatch5-font-family;
           font-size: @font-swatch5-font-size;
           font-weight: @font-swatch5-font-weight;
-          line-height: bkscale(@font-swatch5-line-height, 0.55);
+          line-height: @font-swatch5-line-height;
           color: @color-swatch1;
           letter-spacing: @font-swatch5-letter-spacing;
         }
@@ -1374,6 +1375,44 @@ ul.item-list{
 /* Narrow desktop */
 @media (max-width: 980px) {
 
+  .gallery-widget li {
+    width: 48%;
+  }
+  .widget.extendednavigation ul li.folder > .text, .widget.extendednavigation ul li > a {
+    padding: 10px 15px;
+  }
+  h2{
+    font-size: 26px;
+  }
+  .socialicons{
+    .icons {
+      span{
+        margin-left: 2px;
+        a{
+          width: 30px;
+          height: 30px;
+          &:before{
+            width: 30px;
+            height: 30px;
+            font: 12px/30px 'FontAwesome';
+          }
+        }
+      }
+    }
+  }
+  time.date {
+    height: 90px;
+    width: 90px;
+    span {
+      padding-top: 10px;
+    }
+  }
+  .widget.button{
+    text-align: right;
+    .b-wrap{
+      text-align: right;
+    }
+  }
 }
 
 /*== Up to 980px and beyond 768px ======================================
@@ -1392,23 +1431,15 @@ ul.item-list{
   /* NAV */
   .widget.extendednavigation {
     display: block;
-    width: 100%;
     ul {
       width: 100%;
       display: none;
-      margin: 2em 0;
+      margin: 0 0 20px;
       li {
         width: 100%;
-        padding: 0 !important;
-        border-bottom: 2px solid darken(@color-swatch7,10%);
         &.folder .text,
         a{
-          color: @color-swatch1;
-          padding: 10px 20px;
-          &:hover{
-            background-color: @color-swatch1;
-            color: @color-swatch3;
-          }
+          padding: 10px;
         }
         > ul {
           display: none!important;
@@ -1420,12 +1451,6 @@ ul.item-list{
           bottom: inherit;
           padding: 0;
           margin: 0;
-          background-color: lighten(@color-swatch5,18%);
-            li{
-              &:first-child {
-                border-top: 2px solid @color-swatch3;
-              }
-            }
           }
         }
       }
@@ -1446,18 +1471,29 @@ ul.item-list{
         display: inline-block;
         position: absolute;
         right: 0;
-        top: -41px;
+        top: -90px;
       }
     }
   }
-
+  footer{
+    text-align: center;
+  }
+  footer .socialicons .icons {
+    text-align: center;
+  }
 }
 
 /*== Up to 640px ==================================================
 ====================================================================*/
 
 @media (max-width: 640px) {
-
+  .responsiveslideshow .slideshow-widget > ul.slideshow-image-list .content-wrapper{
+    display: none;
+  }
+  figure.fleft.image {
+    float: none;
+    margin-right: 0px;
+  }
 }
 
 /*== Up to 480px ==================================================
@@ -1466,25 +1502,29 @@ ul.item-list{
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
+  figure.fleft.img {
+    float: none;
+    margin-right: 0px;
+  }
   /* NAV */
   .widget.extendednavigation {
     display: block;
     width: 100%;
     ul {
-      display: block;
       width: 100%;
       float: left;
-      margin: 0;
+      margin: 0 0 20px !important;
       li {
         display: block!important;
         width: 100%;
         margin: 0;
         text-align: center;
+        border: none !important;
         a{
+          .border-radius(0) !important;
         }
         &:hover {
           > ul {
-            background-color: darken(@color-swatch2,3%);
             width: 100%!important;
             margin: 0;
             > li {
@@ -1499,21 +1539,9 @@ ul.item-list{
       }
     }
     /* NAV ICON */
-    .widget .extendednavigation a.pull {
-      display: block;
-      width: 100%;
-      position: absolute;
-      top: 6px;
+    a.pull {
       &:after {
-        content:"";
-        background: image('/images/nav-icon.png') no-repeat;
-        background-position: center;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        position: absolute;
-        right: 0;
-        top: -41px;
+        top: -50px;
       }
     }
   }
