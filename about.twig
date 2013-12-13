@@ -1,0 +1,103 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+    <div class="global">
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+                            <div class="row">
+                                <article class="span5">
+                                    {{widget('logo', 'name', {"defaultlogo": asset('images/logo.png')})|raw}}
+                                    {{widget('profile', 'companydescription', { 'profileType':'companydescription', 'companydescription':'exclusive house plans'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                                <article class="span7">
+                                    {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+                                </article>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--content-->
+        <div class="container">
+            <div class="row">
+                <article class="span12">
+
+                    {{zone('main')|raw}}
+
+                    {{widget('content', 'title1', {content: '<h2>services overview</h2>', lines: 'all'})|raw}}
+                    {{widget('gallery', 'services', 
+                        {'showDescription': true,
+                        'showTitle': true,
+                        'images':
+                        [
+                        {'imageHeight':'357', 'imageWidth':'480', 'url':asset('/images/services/img1.jpg'), 'title':'Lorem ipsum ster spei krie', 'description': 'Nulam nec massa lroep ostre'},
+                        {'imageHeight':'357', 'imageWidth':'480', 'url':asset('/images/services/img2.jpg'), 'title':'Lorem ipsum opster she', 'description': 'Nulam nec massa Aliquam con'},
+                        {'imageHeight':'357', 'imageWidth':'480', 'url':asset('/images/services/img3.jpg'), 'title':'Lorem ipsum aters at rsp', 'description': 'Nulam nec massa lore dolor'},
+                        {'imageHeight':'357', 'imageWidth':'480', 'url':asset('/images/services/img4.jpg'), 'title':'Lorem ipsum halleuse', 'description': 'Nulam nec massa portse'}
+                        ]
+                    })|raw}}
+                    {{widget('space', 'space', {'height': '50'})|raw}}
+
+                    <div class="row">
+                        <article class="span3">
+                            {{widget('content', 'title2', {content: '<h2>services list</h2>', lines: 'all'})|raw}}
+                            {{widget('content', 'text1', {content: '<strong>Adicing eesque sed doloru ferment ste.</strong><p>Mes cuml dia. Sed in lacus ut enim ascing ser aliiqt sit amet euismod ictor ut ligulatmi aters dapibus tic mtsent justo dolor.</p><ul class="item-list"><li><a href="#">Lorem ipsum dolor sit amet consectetue</a></li><li><a href="#">Praesent vestibulum lroem porta</a></li><li><a href="#">Molestie lacus aenean nonummy ndrerit</a></li><li><a href="#">Muris phasellus por fusce suscipi</a></li><li><a href="#">Carius mnaoq e penatibus et magnis dis</a></li><li><a href="#">Parturientonteascetur orem ipsum dos</a></li><li><a href="#">Amet consectetuer adipiscing elit</a></li><li><a href="#">Praesent vestibulum molestie lacus aene</a></li><li><a href="#">Bnummy ndrerit mauris phasel</a></li><li><a href="#">Lorem ipsum dolor sit amet consectetue</a></li><li><a href="#">Praesent vestibulum lroem porta</a></li></ul>', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+                        </article>
+                        <article class="span9">
+                            {{widget('content', 'title3', {content: '<h2>special offers</h2>', lines: 'all'})|raw}}
+                            <figure class="fleft">{{widget('image', 'image1', { 'src': asset('images/pages/page2-img1.jpg'), 'imageWidth': '250px'})|raw}}</figure>
+                            {{widget('content', 'text2', {content: '<strong>Adicing eesque sed doloru fermentu lore postr rsen mate consectetuer adipiscing.</strong><p>Mes cuml dia. Sed in lacus ut enim ascing aliiqt sit amet euismod ictor ut ligulatmi dapibus tic mts. Mes cuml dia. Sed in lacus ut enim ascing aliiqt sit.  Consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla ster.</p>', lines: 'all'})|raw}}
+                            {{widget('button', 'button1', {italic: false, text:'Read More', 'align':'widget-align-left'})|raw}}
+                            <div class="clear"></div>
+                            <figure class="fleft">{{widget('image', 'image2', { 'src': asset('images/pages/page2-img2.jpg'), 'imageWidth': '250px'})|raw}}</figure>
+                            {{widget('content', 'text3', {content: '<strong>Adicing eesque sed doloru fermentu lore postr rsen mate consectetuer adipiscing.</strong><p>Mes cuml dia. Sed in lacus ut enim ascing aliiqt sit amet euismod ictor ut ligulatmi dapibus tic mts. Mes cuml dia. Sed in lacus ut enim ascing aliiqt sit.  Consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla ster.</p>', lines: 'all'})|raw}}
+                            {{widget('button', 'button2', {italic: false, text:'Read More', 'align':'widget-align-left'})|raw}}
+                            <div class="clear"></div>
+                            <figure class="fleft">{{widget('image', 'image3', { 'src': asset('images/pages/page2-img3.jpg'), 'imageWidth': '250px'})|raw}}</figure>
+                            {{widget('content', 'text4', {content: '<strong>Adicing eesque sed doloru fermentu lore postr rsen mate consectetuer adipiscing.</strong><p>Mes cuml dia. Sed in lacus ut enim ascing aliiqt sit amet euismod ictor ut ligulatmi dapibus tic mts. Mes cuml dia. Sed in lacus ut enim ascing aliiqt sit.  Consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla ster.</p>', lines: 'all'})|raw}}
+                            {{widget('button', 'button3', {italic: false, text:'Read More', 'align':'widget-align-left'})|raw}}
+                            <div class="clear"></div>
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+                        </article>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <section class="span12">
+                        <div class="row">
+                            <article class="span8">
+
+                                {{widget('companyname', 'companyname', {"business": "house plans"})|raw}}
+                                {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'© Copyright 2014. All rights reserved'})|raw}}
+                                {{widget('space', 'space', {'height': '30'})|raw}}
+
+                            </article>
+                            <article class="span4">
+
+                                {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                                {{widget('space', 'space', {'height': '30'})|raw}}
+
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</div>
+
+{% endblock %}
