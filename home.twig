@@ -29,8 +29,6 @@
         <div class="container">
             <div class="row">
                 <article class="span12">
-                    
-                    {{zone('main')|raw}}
 
                     {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'crop':1, 'transSpeed': '1000', 'transType': 'fade', 'showDescription': true, 'showTitle': true, 'showButtons': true, 'showBullets': false, 'allowPause': false, 'allowLoop': true, 'images':[{'imageHeight':'391', 'imageWidth':'1170', 'url':asset('/images/slider/slide-1.jpg'), 'title':'varius ac vulputate in eleifen.', 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat est sit amet odio interdum quis semper libero volutpatMauris libero sem.'}, {'imageHeight':'391','imageWidth':'1170', 'url':asset('/images/slider/slide-2.jpg'), 'title':'varius ac vulputate in eleifen.', 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat est sit amet odio interdum quis semper libero volutpatMauris libero sem.'}, {'imageHeight':'391', 'imageWidth':'1170', 'url':asset('/images/slider/slide-3.jpg'), 'title':'varius ac vulputate in eleifen.', 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat est sit amet odio interdum quis semper libero volutpatMauris libero sem.'}]})|raw}}
                     {{widget('space', 'space', {'height': '50'})|raw}}
@@ -51,6 +49,8 @@
                         ]
                     })|raw}}
                     {{widget('space', 'space', {'height': '50'})|raw}}
+                    
+                    {{zone('main')|raw}}
 
                     <div class="row">
                         <article class="span6">
