@@ -97,7 +97,7 @@
                         </article>
                         <article class="span4">
                             {{widget('content', 'title6', {content: '<h2>contact us</h2>', lines: 'all'})|raw}}
-                            {{zone('main')|raw}}
+                            {{widget('contactform', 'contactform', {'text': 'Submit','formTitle': 'Contact Form', 'email': 'profile'})|raw}}
                             {{widget('space', 'space', {'height': '50'})|raw}}
                         </article>
                     </div>
