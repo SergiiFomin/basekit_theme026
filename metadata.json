@@ -6,12 +6,12 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#645f58",
-            "color3":"#cc220b",
-            "color4":"#5c564d",
-            "color5":"#d1ccc2",
-            "color6":"#524a42",
-            "color7":"#77736c"
+            "color2":"#7f7f7f",
+            "color3":"#f49948",
+            "color4":"#494949",
+            "color5":"#8a8a8a",
+            "color6":"#fbfaf8",
+            "color7":"#8a8a8a"
         },
         "Swatch 2": {
             "color1":"#ffffff",
